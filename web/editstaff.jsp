@@ -62,10 +62,22 @@
 		<label for="designation">Designation</label>
 		<select id="designation" name="designation">
                     <option value="-1">Select</option>
-                    <option value="Sweeper" <% if(rs.getString("designation").equalsIgnoreCase("Sweeper")){%>selected="selected"<%}%>>Sweeper</option>
-                    <option value="Warden">Warden</option>
-                    <option value="Security">Security</option>
-                    <option value="Cook">Cook</option>
+                    <option value="Sweeper" <% if(rs.getString("designation").equalsIgnoreCase("Sweeper")){%>
+                            selected="selected"
+                            <%}%>
+                            >Sweeper</option>
+                    <option value="Warden" <% if(rs.getString("designation").equalsIgnoreCase("Warden")){%>
+                            selected="selected"
+                            <%}%>
+                            >Warden</option>
+                    <option value="Security"<% if(rs.getString("designation").equalsIgnoreCase("Security")){%>
+                            selected="selected"
+                            <%}%>
+                            >Security</option>
+                    <option value="Cook"<% if(rs.getString("designation").equalsIgnoreCase("Cook")){%>
+                            selected="selected"
+                            <%}%>
+                            >Cook</option>
 		</select><br><br>
 
 		<label for="phone">Phone</label><br>
