@@ -72,12 +72,6 @@ public final class roomView_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\tfont-weight: bold;\n");
       out.write("\t\t\tcolor: blue\n");
       out.write("\t\t}\n");
-      out.write("\t\t#back{\n");
-      out.write("\t\t\tborder-radius: 5px;\n");
-      out.write("\t\t\tmargin-top: 20px ;\n");
-      out.write("\t\t\tfloat: right\n");
-      out.write("\n");
-      out.write("\t\t}\n");
       out.write("\t\th2{\n");
       out.write("\t\t\ttext-align: center;\n");
       out.write("\t\t\ttext-decoration: underline\n");
@@ -88,19 +82,24 @@ public final class roomView_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t<div class=\"container\">\n");
       out.write("\t\t<h2>Room View</h2>\n");
       out.write("\t\t<form method=\"post\">\n");
-      out.write("                    ");
-
-                    DbQuery db=new DbQuery();
-                    ResultSet rs=db.viewRoom();
-                    if(rs.next()){
-                    
-      out.write("\n");
       out.write("\t\t<div  class=\"slt-hostel\">\n");
       out.write("\t\t\t<label for=\"selectHostel\">Select Hostel : </label>\n");
-      out.write("\t\t\t<select id=\"selectHostel\">\n");
-      out.write("\t\t\t\t<option></option>\n");
-      out.write("\t\t\t\t<option></option>\n");
+      out.write("                        <select id=\"selectHostel\" name=\"selected_hostel\">\n");
+      out.write("                            <option value=\"boys\">Boys</option>\n");
+      out.write("                            <option value=\"girls\">Girls</option>\n");
       out.write("\t\t\t</select><br><br>\n");
+      out.write("                        <input type=\"submit\" value=\"Submit\" name=\"selectHostel\" /><br><br>\n");
+      out.write("                        \n");
+      out.write("                    ");
+
+                        DbQuery db=new DbQuery();
+                        if(request.getParameter("selectHostel")!=null){
+                            String hostel=request.getParameter("selected_hostel");                            
+                            ResultSet rs=db.viewRoom(hostel);
+                            if(rs.next()){
+                    
+      out.write("\n");
+      out.write("\n");
       out.write("\t\t</div>\n");
       out.write("\t\t<div>\n");
       out.write("\t\t\t<table style=\"width: 98%;margin: 0 1% 0 1%;\">\n");
@@ -142,7 +141,7 @@ public final class roomView_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\" >edit</a>\n");
       out.write("                                        <a href=\"deleteroom.jsp?id=");
       out.print(rs.getString("room_id"));
-      out.write("\">DELETE</a>\n");
+      out.write("\">delete</a>\n");
       out.write("\t\t\t\t\t</td>\n");
       out.write("\t\t\t\t</tr>\n");
       out.write("                                ");
@@ -162,11 +161,10 @@ public final class roomView_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <h2 style=\"text-align:center\">NO DATA</h2>\n");
       out.write("                    ");
 
-                    }
+                    }}
                     
       out.write("\n");
       out.write("\t\t</div>\n");
-      out.write("\t\t<button type=\"submit\" value=\"back\" id=\"back\">Back</button>\n");
       out.write("\t\t</form>\n");
       out.write("\t</div>\n");
       out.write("</body>\n");

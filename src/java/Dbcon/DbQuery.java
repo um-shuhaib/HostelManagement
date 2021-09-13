@@ -83,10 +83,10 @@ public class DbQuery {
         return rs;
     }
     
-    public ResultSet viewRoom()
+    public ResultSet viewRoom(String hostel)
     {
         try {
-            String str="SELECT * FROM `room`";
+            String str="SELECT * FROM `room` WHERE hostel='"+hostel+"'";
             rs=st.executeQuery(str);
             
         } catch (Exception e) {

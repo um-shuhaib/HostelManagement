@@ -37,17 +37,22 @@
 	<div class="container">
 		<h2>Room View</h2>
 		<form method="post">
-                    <%
-                    DbQuery db=new DbQuery();
-                    ResultSet rs=db.viewRoom();
-                    if(rs.next()){
-                    %>
 		<div  class="slt-hostel">
 			<label for="selectHostel">Select Hostel : </label>
-			<select id="selectHostel">
-				<option></option>
-				<option></option>
+                        <select id="selectHostel" name="selected_hostel">
+                            <option value="boys">Boys</option>
+                            <option value="girls">Girls</option>
 			</select><br><br>
+                        <input type="submit" value="Submit" name="selectHostel" /><br><br>
+                        
+                    <%
+                        DbQuery db=new DbQuery();
+                        if(request.getParameter("selectHostel")!=null){
+                            String hostel=request.getParameter("selected_hostel");                            
+                            ResultSet rs=db.viewRoom(hostel);
+                            if(rs.next()){
+                    %>
+
 		</div>
 		<div>
 			<table style="width: 98%;margin: 0 1% 0 1%;">
@@ -73,7 +78,7 @@
 					<td><%=rs.getString("hostel")%></td>
 					<td>
                                             <a href="editroom.jsp?id=<%=rs.getString("room_id")%>" >edit</a>
-                                        <a href="deleteroom.jsp?id=<%=rs.getString("room_id")%>">DELETE</a>
+                                        <a href="deleteroom.jsp?id=<%=rs.getString("room_id")%>">delete</a>
 					</td>
 				</tr>
                                 <%
@@ -88,7 +93,7 @@
                     %>
                     <h2 style="text-align:center">NO DATA</h2>
                     <%
-                    }
+                    }}
                     %>
 		</div>
 		</form>
