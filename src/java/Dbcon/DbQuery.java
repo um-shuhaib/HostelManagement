@@ -28,9 +28,9 @@ public class DbQuery {
             System.err.println(e.toString());
         }
     }
-    
-    
-    
+
+
+
     public int addStaff(String sname,String age,String gender,String hostel,String salary,String address,String designation,String phone,String email,String password ){
         int i=0;
         String lid="";
@@ -46,7 +46,7 @@ public class DbQuery {
         } catch (Exception e) {
             System.err.println(e.toString());
         }
-        
+
         return i;
     }
     public int addStudent(String studname,String age,String gender,String address,String fathname,String fathphone,String mothname,String mothphone,String guardname,String guardphone,String institute,String joindate,String roomid){
@@ -57,7 +57,7 @@ public class DbQuery {
         } catch (Exception e) {
             System.err.println(e.toString());
         }
-        
+
         return i;
     }
     public int addRoom(String roomno,String totbeds,String flr,String hostel){
@@ -68,7 +68,7 @@ public class DbQuery {
         } catch (Exception e) {
             System.err.println(e.toString());
         }
-        
+
         return i;
     }
     public ResultSet viewStaff()
@@ -76,19 +76,19 @@ public class DbQuery {
         try {
             String str="SELECT * FROM `staff`";
             rs=st.executeQuery(str);
-            
+
         } catch (Exception e) {
             System.err.print(e.toString());
         }
         return rs;
     }
-    
+
     public ResultSet viewRoom(String hostel)
     {
         try {
-            String str="SELECT * FROM `room` WHERE hostel='"+hostel+"'";
+            String str="SELECT * FROM room WHERE hostel='"+hostel+"' ORDER BY room_no";
             rs=st.executeQuery(str);
-            
+
         } catch (Exception e) {
             System.err.print(e.toString());
         }
@@ -99,7 +99,7 @@ public class DbQuery {
         try {
             String str="SELECT * FROM `room`";
             rs=st.executeQuery(str);
-            
+
         } catch (Exception e) {
             System.err.print(e.toString());
         }
@@ -110,7 +110,7 @@ public class DbQuery {
         try {
             String str="SELECT student.*,room.* FROM student,room WHERE room.hostel='"+hostel+"' AND student.room_id=room.room_id ORDER BY room.room_no";
             rs=st.executeQuery(str);
-            
+
         } catch (Exception e) {
             System.err.print(e.toString());
         }
@@ -124,13 +124,13 @@ public class DbQuery {
             System.err.print(e.toString());
         }
         return rs;
-    }  
+    }
     public int deleteStaff(String sid)
     {
         int i=0;
         try {
             i=st.executeUpdate("DELETE FROM staff WHERE staff_id='"+sid+"'");
-            
+
         } catch (Exception e) {
             System.err.println(e.toString());
         }
@@ -141,7 +141,7 @@ public class DbQuery {
         int i=0;
         try {
             i=st.executeUpdate("DELETE FROM student WHERE student_id='"+stid+"'");
-            
+
         } catch (Exception e) {
             System.err.println(e.toString());
         }
@@ -162,7 +162,7 @@ public class DbQuery {
         try {
             String str="SELECT * FROM student WHERE student_id='"+id+"'";
             rs=st.executeQuery(str);
-            
+
         } catch (Exception e) {
             System.err.print(e.toString());
         }
@@ -173,7 +173,7 @@ public class DbQuery {
         int i=0;
         try {
             i=st.executeUpdate("UPDATE student SET stud_name='"+studname+"',age='"+age+"',gender='"+gender+"',address='"+address+"',father_name='"+fathname+"',fath_phone='"+fathphone+"',mother_name='"+mothname+"',moth_phone='"+mothphone+"',guard_name='"+guardname+"',guard_phone='"+guardphone+"',institute='"+institute+"',join_date='"+joindate+"',room_id='"+roomid+"' WHERE student_id='"+stid+"'");
-            
+
         } catch (Exception e) {
             System.err.println(e.toString());
         }
@@ -184,7 +184,7 @@ public class DbQuery {
         try {
             String str="SELECT * FROM staff WHERE staff_id='"+id+"'";
             rs=st.executeQuery(str);
-            
+
         } catch (Exception e) {
             System.err.print(e.toString());
         }
@@ -195,7 +195,7 @@ public class DbQuery {
         int i=0;
         try {
             i=st.executeUpdate("UPDATE staff SET staff_name='"+sname+"',age='"+age+"',gender='"+gender+"',hostel='"+hostel+"',salary='"+salary+"',address='"+address+"',designation='"+designation+"',phone='"+phone+"',email='"+email+"' WHERE staff_id='"+sid+"'");
-            
+
         } catch (Exception e) {
             System.err.println(e.toString());
         }
@@ -206,7 +206,7 @@ public class DbQuery {
         try {
             String str="SELECT * FROM room WHERE room_id='"+rid+"'";
             rs=st.executeQuery(str);
-            
+
         } catch (Exception e) {
             System.err.print(e.toString());
         }
@@ -217,7 +217,7 @@ public class DbQuery {
         int i=0;
         try {
             i=st.executeUpdate("UPDATE room SET room_no='"+roomno+"',tot_beds='"+totbeds+"',flr='"+flr+"',hostel='"+hostel+"' WHERE room_id='"+rid+"'");
-            
+
         } catch (Exception e) {
             System.err.println(e.toString());
         }
@@ -230,8 +230,8 @@ public class DbQuery {
         }catch (Exception e){
             System.err.println(e.toString());
         }
-        
+
         return i ;
     }
-    
+
 }
