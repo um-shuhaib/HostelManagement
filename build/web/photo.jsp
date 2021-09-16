@@ -28,7 +28,7 @@
 
         <form id="form1" name="form1" method="post" enctype="multipart/form-data" action="studentfile.jsp">
             <%
-            String stud_id=request.getParameter("id");
+            String stud_id=request.getParameter("student_id");
             String stud_name=request.getParameter("name");
             %>
             <table >

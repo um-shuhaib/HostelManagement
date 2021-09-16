@@ -94,6 +94,17 @@ public class DbQuery {
         }
         return rs;
     }
+    public ResultSet viewRoom()
+    {
+        try {
+            String str="SELECT * FROM `room`";
+            rs=st.executeQuery(str);
+            
+        } catch (Exception e) {
+            System.err.print(e.toString());
+        }
+        return rs;
+    }
     public ResultSet viewStudent(String hostel)
     {
         try {
