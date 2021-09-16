@@ -123,7 +123,7 @@ public final class studentView_jsp extends org.apache.jasper.runtime.HttpJspBase
                                     do{
                                 
       out.write("\n");
-      out.write("\t\t\t\t\n");
+      out.write("\t\t\t\t<tr>\n");
       out.write("\t\t\t\t\t<td>");
       out.print(i);
       out.write("</td>\n");
@@ -166,11 +166,13 @@ public final class studentView_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t<td>");
       out.print(rs.getString("room_id"));
       out.write("</td>\n");
-      out.write("                                        <td><img src=\"studentphoto");
+      out.write("                                        <td><img src=\"studentphoto/");
       out.print(rs.getString("photo"));
       out.write("\" height=\"100\" width=\"75\"/><br>\n");
       out.write("                                        <a href=\"photo.jsp?id=");
-      out.print(rs.getString("photo"));
+      out.print(rs.getString("student_id"));
+      out.write("&name=");
+      out.print(rs.getString("stud_name"));
       out.write("\" >ADD/CHANGE</a>\n");
       out.write("                                        </td>\n");
       out.write("\t\t\t\t\t<td>\n");
@@ -181,6 +183,7 @@ public final class studentView_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.print(rs.getString("student_id"));
       out.write("\">Delete</a>\n");
       out.write("\t\t\t\t\t</td>\n");
+      out.write("                                </tr>\n");
       out.write("\t\t\t\t\n");
       out.write("                                ");
 

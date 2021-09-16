@@ -12,12 +12,10 @@
             height: 300px;
             width: 100%;
             padding-left: 40%;
-            padding-top: 38px;
-            
+            padding-top: 38px
         }
         .h1{
             padding-left: 648px
-            
         }
 
     </style>
@@ -27,21 +25,22 @@
     <h1>UPLOAD PHOTO</h1>
     </div>
     <div class="main">
-        
-        <form action="post">
+
+        <form id="form1" name="form1" method="post" enctype="multipart/form-data" action="studentfile.jsp">
             <%
-            String id=request.getParameter("id");
+            String stud_id=request.getParameter("id");
             String stud_name=request.getParameter("name");
             %>
             <table >
                 <tr>
                     <td>STUDENT NAME</td>
                     <td><input type="text" readonly="readonly" value="<%=stud_name%>" name="sname" id="sname"></td>
+                     <td><input type="hidden" value="<%=stud_id%>" name="photo_id" id="photo_id"></td>
                 </tr>
-               
+
                 <tr>
                     <td>UPLOAD PHOTO</td>
-                    <td><input type="file" ></td>
+                    <td><input type="file" name="photo" ></td>
                 </tr>
                 <tr>
                     <td></td>

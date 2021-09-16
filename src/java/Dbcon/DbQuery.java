@@ -211,6 +211,16 @@ public class DbQuery {
             System.err.println(e.toString());
         }
         return i;
-    } 
+    }
+    public int addPhoto(String sid, String photo){
+        int i=0;
+        try {
+            i=st.executeUpdate("UPDATE student SET photo='"+photo+"' WHERE student_id='"+sid+"'") ;
+        }catch (Exception e){
+            System.err.println(e.toString());
+        }
+        
+        return i ;
+    }
     
 }

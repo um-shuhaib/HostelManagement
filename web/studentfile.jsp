@@ -1,14 +1,15 @@
+
 <%@page import="java.util.ArrayList"%>
-<%@page import="DbCon.FilePath"%>
-<%@page import="DbCon.DbQueries"%>
-<%-- 
+<%@page import="Dbcon.FilePath"%>
+<%@page import="Dbcon.DbQuery"%>
+<%--
     Document   : uploadfile
     Created on : 20 Jun, 2015, 4:12:45 PM
     Author     : nidhin lal
 --%>
 
 <%@page import="java.sql.Statement"%>
-<%@page import="java.sql.Connection"%>
+x<%@page import="java.sql.Connection"%>
 
 <%@page import="java.io.FileOutputStream"%>
 <%@page import="java.io.File"%>
@@ -22,9 +23,8 @@
     try{
 ServletFileUpload upload=new ServletFileUpload();
 FileItemIterator iter=null;
-String sname="",categ="",adr="",age="",mob="",email="",exp="",desc="",lic="",year="",photo="";
+String sid="", photo="";
 String fle=null;
-ArrayList<String> sports=new ArrayList<String>();
 iter=upload.getItemIterator(request);
 while(iter.hasNext())
 {
@@ -34,58 +34,22 @@ while(iter.hasNext())
     if(item.isFormField())
     {
         String str=Streams.asString(stream);
-        if(nam.equals("sname"))
+        if(nam.equals("photo_id"))
         {
-            sname=str;
+            sid=str;
         }
-        else if(nam.equals("categ"))
-        {
-            categ=str;
-        }
-        else if(nam.equals("adr"))
-        {
-                adr=str;
-        }
-        else if(nam.equals("age"))
-        {
-            age=str;
-        }
-        if(nam.equals("mob"))
-        {
-            mob=str;
-        }
-        if(nam.equals("email"))
-        {
-            email=str;
-        }
-        if(nam.equals("exp"))
-        {
-            exp=str;
-        }
-        if(nam.equals("desc"))
-        {
-            desc=str;
-        }
-        if(nam.equals("lic"))
-        {
-            lic=str;
-        }
-        if(nam.equals("year"))
-        {
-            year=str;
-        }
-       
+
     }
     else
     {
-       
+
         if(item.getName()!="")
         {
             if(nam.equals("photo")){
                 String f1=item.getName().substring(item.getName().lastIndexOf("\\") + 1);
                 String ext[]=f1.split("\\.");
-                photo=sname+"."+ext[ext.length-1];
-                File f=new File(FilePath.staffPhoto+photo);
+                photo=sid+"."+ext[ext.length-1];
+                File f=new File(FilePath.Path+photo);
                 if(!f.exists())
                 {
                     f.createNewFile();
@@ -102,27 +66,21 @@ while(iter.hasNext())
 }
 }
 
-DbQueries db=new DbQueries();
-int i=db.addStaff(sname, age, categ, adr, mob, email, exp, desc, lic, year, photo);
+DbQuery db=new DbQuery();
+int i=db.addPhoto(sid, photo);
 
 
 if(i>0)
 {
 
     %>
-    <script>alert("Successfully Entered...!!");
-    window.location="StaffRegistration.jsp";</script>
-   
-<%
-}else{
-%>
-    <script>alert("This email id is already registered...!!");
-    window.location="StaffRegistration.jsp";</script>
-   
+    <script>
+        alert("Successfully Updated...!!");
+        window.location="studentView.jsp";
+    </script>
+
 <%
 }
-
-
 }catch(Exception e)
 {
     out.print(e.toString());
