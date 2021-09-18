@@ -1,32 +1,16 @@
+<%@include file="Header.jsp" %>
+
 <%@page import="java.sql.ResultSet"%>
 <%@page import="Dbcon.DbQuery"%>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Hostel-Management</title>
-	<style>
-		.something {
-			background-color: #F0F8FF ;
-			margin: 20px 30% 30% 30% ;
-			padding: 10px 40px 60px 20px ;
-			align-items: center;
-		}
-		input,label {
-			margin-top: 5px ;
-			margin-left: 80px ;
-			margin-bottom: 5px ; 
-			padding-top: 10px ;
-			padding-bottom: 8px;
-		}
-		h2{
-			text-align: center;
-		}
-	</style>
 </head>
 <body>
-	<div class="something">
+	<div>
 		<h2>Update Staff</h2>
-	<form method="post" style="margin-top: 50px;">
+	<form method="post">
             <% String id=request.getParameter("id");
                DbQuery db=new DbQuery();
                ResultSet rs=db.viewOneStaff(id);
@@ -36,15 +20,15 @@
 		<label for="staff_name">Staff Name</label><br>
                 <input type="text" name="staff_name" id="staff_name" placeholder="Staff Name" value="<%=rs.getString("staff_name")%>" required><br>
 
-                <input style="margin-top : 10px" type="radio" name="gender" id="male" value="male" <% if(rs.getString("gender").equalsIgnoreCase("male")){%>checked="checked"<%}%>/>
-		<label for="male" style="margin-left: 0px">Male</label><br>
-                <input type="radio" name="gender" id="female" value="female" <% if(rs.getString("gender").equalsIgnoreCase("female")){%>checked="checked"<%}%> />
-		<label for="female" style="margin-left: 0px">Female</label><br><br>
+                <input type="radio" name="gender" id="male" value="male" <%if(rs.getString("gender").equalsIgnoreCase("male")){%> checked="checked" <%}%> />
+		<label for="male">Male</label><br>
+                <input type="radio" name="gender" id="female" value="female" <% if(rs.getString("gender").equalsIgnoreCase("female")){%> checked="checked"<%}%> />
+		<label for="female"> Female </label><br><br>
 
 		<label for="age">AGE : </label>
-                <input type="text" id="age" name="age" value="<%=rs.getString("age")%>" style="width: 40px; margin-left: 1px;">
+                <input type="text" id="age" name="age" value="<%=rs.getString("age")%>">
 
-		<div style="margin-top: 8px; margin-bottom: 8px">
+		<div>
 		<label for="Hostel">Hostel</label>
     	<select id="hostel" name="hostel">
 			<option value="Boys">Boys</option>
@@ -86,9 +70,9 @@
 		<label for="email">Email</label><br>
                 <input type="email" name="email" id="email" placeholder="Email" value="<%=rs.getString("email")%>" required><br>
 
-                <input type="submit" value="Update" name="Submit" style="margin-left: 250px;margin-top: 10%" >
+                <input type="submit" value="Update" name="Submit">
                 <%}%>
-	
+
 	</form>
 	</div>
 
@@ -105,7 +89,7 @@
     String address=request.getParameter("address");
     String designation=request.getParameter("designation");
     String phone=request.getParameter("phone");
-    String email=request.getParameter("email");  
+    String email=request.getParameter("email");
 
 int i=db.editStaff(sname, age, gender, hostel, salary, address, designation, phone, email, id);
 if(i>0){
@@ -115,6 +99,8 @@ if(i>0){
         window.location="staffView.jsp";
     </script>
     <%
-    } 
+    }
 }
 %>
+
+<%@include file="Footer.jsp" %>

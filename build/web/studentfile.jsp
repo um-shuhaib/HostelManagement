@@ -1,12 +1,8 @@
+<%@include file="Header.jsp" %>
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="Dbcon.FilePath"%>
 <%@page import="Dbcon.DbQuery"%>
-<%--
-    Document   : uploadfile
-    Created on : 20 Jun, 2015, 4:12:45 PM
-    Author     : nidhin lal
---%>
 
 <%@page import="java.sql.Statement"%>
 x<%@page import="java.sql.Connection"%>
@@ -86,3 +82,5 @@ if(i>0)
     out.print(e.toString());
 }
 %>
+
+<%@include file="Footer.jsp" %>

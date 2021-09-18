@@ -1,3 +1,5 @@
+<%@include file="Header.jsp" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,26 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hostel Management</title>
-    <style>
-        .main{
-
-            background-color: aqua;
-            height: 300px;
-            width: 100%;
-            padding-left: 40%;
-            padding-top: 38px
-        }
-        .h1{
-            padding-left: 648px
-        }
-
-    </style>
 </head>
 <body>
-    <div class="h1" >
+    <div>
     <h1>UPLOAD PHOTO</h1>
     </div>
-    <div class="main">
+    <div>
 
         <form id="form1" name="form1" method="post" enctype="multipart/form-data" action="studentfile.jsp">
             <%
@@ -51,4 +39,5 @@
     </div>
 </body>
 </html>
---
+
+<%@include file="Footer.jsp" %>

@@ -1,3 +1,4 @@
+<%@include file="Header.jsp" %>
 
 <%@page import="java.sql.ResultSet"%>
 <%@page import="Dbcon.DbQuery"%>
@@ -5,33 +6,10 @@
 <html>
 <head>
 	<title>Hostel-Management</title>
-		<style>
-		.something{
-			width: 92%;
-			margin-left: 4%;
-			margin-right: 4%;
-			padding: 10px ;
-			text-align: center;
-		}
-		table{
-			width: 98%;
-			margin-left: 1%;
-			margin-right: 1%;
-                        background-color: #F0F8FF ;
-		}
-		table,td,th{
-			border-collapse: collapse;			
-			border: 2px solid black ;
-		}
-		button{
-			margin-left: 8px;
-			border-radius: 5px;
-
-		}
-	</style>
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
 </head>
 <body>
-	<div class="something">
+	<div>
 		<form method="post">
 			<label for="selectHostel">Select Hostel </label>
                         <select id="selectHostel" name="hostel">
@@ -40,7 +18,7 @@
                                 <option value="Girls">Girls</option>
 			</select><br><br>
                         <input type="submit" name="btn" value="Submit"/>
-                        
+
                         <br><br>
                         <%
                         if(request.getParameter("btn")!=null){
@@ -97,7 +75,7 @@
                                                 <a href="deletestudent.jsp?id=<%=rs.getString("student_id")%>">Delete</a>
 					</td>
                                 </tr>
-				
+
                                 <%
                                     i++;
                                     }while(rs.next());
@@ -108,7 +86,7 @@
                         else
                         {
                         %>
-                        <h2 style="text-align:center">NO DATA</h2>
+                        <h2>NO DATA</h2>
                         <%
                         }}
                         %>
@@ -118,3 +96,5 @@
 
 </body>
 </html>
+
+<%@include file="Footer.jsp" %>
