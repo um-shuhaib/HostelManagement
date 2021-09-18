@@ -1,105 +1,107 @@
 <%@page import="Dbcon.DbQuery"%>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Hostel-Management</title>
-	<style>
-		.something {
-			background-color: #F0F8FF ;
-			margin: 20px 30% 30% 30% ;
-			padding: 10px 40px 60px 20px ;
-			align-items: center;
-		}
-		input,label {
-			margin-top: 5px ;
-			margin-left: 80px ;
-			margin-bottom: 5px ; 
-			padding-top: 10px ;
-			padding-bottom: 8px;
-		}
-		h2{
-			text-align: center;
-		}
-	</style>
-</head>
-<body>
-	<div class="something">
-		<h2>Staff Registration</h2>
-	<form method="post" style="margin-top: 50px;">
-		<label for="staff_name">Staff Name</label><br>
-		<input type="text" name="staff_name" id="staff_name" placeholder="Staff Name" required><br>
 
-		<input style="margin-top : 10px" type="radio" name="gender" id="male" value="male">
-		<label for="male" style="margin-left: 0px">Male</label><br>
-		<input type="radio" name="gender" id="female" value="female">
-		<label for="female" style="margin-left: 0px">Female</label><br><br>
+<%@include file="Header.jsp" %>
+<div>
+	<h2>Staff Registration</h2>
+	<form method="post">
+		<table>
+				<tr>
+					<td><label for="staff_name">Staff Name</label></td>
+					<td><input type="text" name="staff_name" id="staff_name" placeholder="Staff Name"></td>
+				</tr>
 
-		<label for="age">AGE : </label>
-		<input type="text" id="age" name="age" style="width: 40px; margin-left: 1px;">
+				<tr>
+					<td> <label for="gender">Gender</label>	</td>
+					<td><input type="radio" name="gender" id="male" checked="checked" value="male">
+						<label for="male">Male</label>
 
-		<div style="margin-top: 8px; margin-bottom: 8px">
-		<label for="Hostel">Hostel</label>
-    	<select id="hostel" name="hostel">
-			<option value="Boys">Boys</option>
-			<option value="Girls">Girls</option>
+						<input type="radio" name="gender" id="female" value="female">
+						<label for="female">Female</label>
+					</td>
+				</tr>
 
-		</select><br>
-		</div>
+				<tr>
+					<td><label for="age">AGE</label></td>
+					<td><input type="text" id="age" name="age"></td>
+				</tr>
 
-		<label for="salary">Salary</label><br>
-		<input type="text" name="salary" id="salary" required><br>
+				<tr>
+					<td><label for="Hostel">Hostel</label></td>
+					<td>
+						<select id="hostel" name="hostel">
+							<option value="Boys">Boys</option>
+							<option value="Girls">Girls</option>
+						</select>
+					</td>
+				</tr>
 
-		<label for="address">Address</label><br>
-		<input type="text" name="address" id="address" required><br><br>
+				<tr>
+					<td><label for="salary">Salary</label></td>
+					<td><input type="text" name="salary" id="salary"></td>
+				</tr>
 
-		<label for="designation">Designation</label>
-		<select id="designation" name="designation">
-                    <option value="-1">Select</option>
-                    <option value="Sweeper">Sweeper</option>
-                    <option value="Warden">Warden</option>
-                    <option value="Security">Security</option>
-                    <option value="Cook">Cook</option>
-		</select><br><br>
+				<tr>
+					<td><label for="address">Address</label></td>
+					<td><textarea id="address" name="address" cols="20" rows="5"></textarea></td>
+				</tr>
 
-		<label for="phone">Phone</label><br>
-		<input type="text" name="phone" id="phone" required><br>
+				<tr>
+					<td><label for="designation">Designation</label></td>
+					<td>
+						<select id="designation" name="designation">
+				                    <option value="-1">Select</option>
+				                    <option value="Sweeper">Sweeper</option>
+				                    <option value="Warden">Warden</option>
+				                    <option value="Security">Security</option>
+				                    <option value="Cook">Cook</option>
+						</select>
+					</td>
+				</tr>
 
-		<label for="email">Email</label><br>
-		<input type="email" name="email" id="email" placeholder="Email" required><br>
+				<tr>
+					<td><label for="phone">Phone</label></td>
+					<td><input type="text" name="phone" id="phone"></td>
+				</tr>
 
-		<label for="password">Password</label><br>
-		<input type="password" name="password" id="password" placeholder="Password" required><br>
+				<tr>
+					<td><label for="email">Email</label></td>
+					<td><input type="email" name="email" id="email" placeholder="Email"></td>
+				</tr>
 
-                <input type="submit" value="Submit" name="Submit" style="margin-left: 250px;margin-top: 10%" >
-	
+				<tr>
+					<td><label for="password">Password</label></td>
+					<td><input type="password" name="password" id="password" placeholder="Password"></td>
+				</tr>
+
+			</table>
+			<input type="submit" value="Submit" name="Submit">
 	</form>
-	</div>
+</div>
+<%@include file="Footer.jsp" %>
 
-</body>
-</html>
 <%
     if(request.getParameter("Submit")!=null)
     {
-    String staff_name=request.getParameter("staff_name");
-    String gender=request.getParameter("gender");
-    String age=request.getParameter("age");
-    String hostel=request.getParameter("hostel");
-    String salary=request.getParameter("salary");
-    String address=request.getParameter("address");
-    String designation=request.getParameter("designation");
-    String phone=request.getParameter("phone");
-    String email=request.getParameter("email");
-    String password=request.getParameter("password");
-//    
-DbQuery dq=new DbQuery();
-int i=dq.addStaff(staff_name, age, gender, hostel, salary, address, designation, phone, email,password);
-if(i>0){
-    %>
-    <script>
-        alert("Successfully registered");
-        window.location="adminhome.jsp";
-    </script>
-    <%
-    } 
-}
+	    String staff_name=request.getParameter("staff_name");
+	    String gender=request.getParameter("gender");
+	    String age=request.getParameter("age");
+	    String hostel=request.getParameter("hostel");
+	    String salary=request.getParameter("salary");
+	    String address=request.getParameter("address");
+	    String designation=request.getParameter("designation");
+	    String phone=request.getParameter("phone");
+	    String email=request.getParameter("email");
+	    String password=request.getParameter("password");
+
+			DbQuery dq=new DbQuery();
+			int i=dq.addStaff(staff_name, age, gender, hostel, salary, address, designation, phone, email,password);
+			if(i>0){
+			%>
+			<script>
+			    alert("Successfully registered");
+			    window.location="adminhome.jsp";
+			</script>
+			<%
+    	}
+	}
 %>
