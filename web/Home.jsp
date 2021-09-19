@@ -48,23 +48,23 @@
 
           <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
             <ul class="navbar-nav  ml-auto">
-              <li class="nav-item ">
+              <li class="nav-item active">
                   <a class="nav-link" href="staffhome.jsp"> Home </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="roomReg.jsp"> Add Room </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="studentReg.jsp"> Add Student</a>
+                <a class="nav-link" href="studentReg.jsp"> Add Student </a>
               </li>
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="roomView.jsp"> View Room </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="studentView.jsp"> View Student</a>
+                <a class="nav-link" href="studentView.jsp"> View Student </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login.html">Logout</a>
+                <a class="nav-link" href="login.jsp"> Logout </a>
               </li>
             </ul>
 
@@ -76,7 +76,7 @@
               <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
             <ul class="navbar-nav  ml-auto">
               <li class="nav-item active">
-                  <a class="nav-link" href="adminhome.jsp">Home </a>
+                  <a class="nav-link" href="adminhome.jsp"> Home </a>
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="staffReg.jsp"> Add Staff </a>

@@ -27,7 +27,7 @@
 
 			<tr>
 				<td><label for="address">Address</label></td>
-				<textarea id="address" name="address" cols="20" rows="5" required></textarea>
+				<td><textarea id="address" name="address" cols="20" rows="5" required></textarea></td>
 				<%-- <td><input type="text" id="address" name="address"></td> --%>
 			</tr>
 

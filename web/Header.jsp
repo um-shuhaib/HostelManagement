@@ -42,55 +42,68 @@
             String utype=session.getAttribute("utype").toString();
             if(utype.equalsIgnoreCase("staff"))
             {
-
+              String uri = request.getRequestURI();
+              String pageName = uri.substring(uri.lastIndexOf("/")+1);
             %>
 
           <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
             <ul class="navbar-nav  ml-auto">
-              <li class="nav-item ">
-                  <a class="nav-link" href="staffhome.jsp">Home</a>
+              <li class="nav-item <%if(pageName.equalsIgnoreCase("staffhome.jsp")){ %>active<% } %>">
+                <a class="nav-link" href="staffhome.jsp"> Home </a>
               </li>
+
+              <li class="nav-item <%if(pageName.equalsIgnoreCase("roomReg.jsp")){ %>active<% } %>">
+                <a class="nav-link" href="roomReg.jsp"> Add Room </a>
+              </li>
+
+              <li class="nav-item <%if(pageName.equalsIgnoreCase("studentReg.jsp")){ %>active<% } %>">
+                <a class="nav-link" href="studentReg.jsp"> Add Student </a>
+              </li>
+
+              <li class="nav-item <%if(pageName.equalsIgnoreCase("roomView.jsp")){ %>active<% } %>">
+                <a class="nav-link" href="roomView.jsp"> View Room </a>
+              </li>
+
+              <li class="nav-item <%if(pageName.equalsIgnoreCase("studentView.jsp")){ %>active<% } %>">
+                <a class="nav-link" href="studentView.jsp"> View Student </a>
+              </li>
+
               <li class="nav-item">
-                <a class="nav-link" href=""> Add Room</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="course.html"> Add Student</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="event.html"> View Room </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html"> View Student</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.html">Logout</a>
+                <a class="nav-link" href="login.jsp"> Logout </a>
               </li>
             </ul>
 
           </div>
             <%
             }else{
-%>
+              String uri = request.getRequestURI();
+              String pageName = uri.substring(uri.lastIndexOf("/")+1);
+            %>
 
               <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
             <ul class="navbar-nav  ml-auto">
-              <li class="nav-item active">
-                  <a class="nav-link" href="Home.jsp">Home </a>
+              <li class="nav-item <%if(pageName.equalsIgnoreCase("Home.jsp")){ %>active<% } %>">
+                  <a class="nav-link" href="Home.jsp"> Home </a>
               </li>
-              <li class="nav-item">
+
+              <li class="nav-item <%if(pageName.equalsIgnoreCase("staffReg.jsp")){ %>active<% } %>">
                   <a class="nav-link" href="staffReg.jsp"> Add Staff </a>
               </li>
-              <li class="nav-item">
+
+              <li class="nav-item <%if(pageName.equalsIgnoreCase("staffView.jsp")){ %>active<% } %>">
                   <a class="nav-link" href="staffView.jsp"> View Staff </a>
               </li>
-              <li class="nav-item">
+
+              <li class="nav-item <%if(pageName.equalsIgnoreCase("roomView.jsp")){ %>active<% } %>">
                   <a class="nav-link" href="roomView.jsp"> View Room </a>
               </li>
-              <li class="nav-item">
+
+              <li class="nav-item <%if(pageName.equalsIgnoreCase("studentView.jsp")){ %>active<% } %>">
                   <a class="nav-link" href="studentView.jsp"> View Student</a>
               </li>
+
               <li class="nav-item">
-                <a class="nav-link" href="login.jsp">Logout</a>
+                <a class="nav-link" href="login.jsp"> Logout </a>
               </li>
             </ul>
 
