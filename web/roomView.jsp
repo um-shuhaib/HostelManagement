@@ -8,8 +8,6 @@
 		<table>
 			<tr>
 				<td><label for="selectHostel">Select Hostel</label></td>
-			</tr>
-			<tr>
 				<td>
 					<select id="selectHostel" name="selected_hostel">
 						<option value="boys">Boys</option>
@@ -17,8 +15,11 @@
 					</select>
 				</td>
 			</tr>
+			<tr>
+				<td><input type="submit" value="Submit" name="selectHostel" /></td>
+			</tr>
 		</table>
-		<input type="submit" value="Submit" name="selectHostel" />
+
 		<%
 		DbQuery db=new DbQuery();
 		if(request.getParameter("selectHostel")!=null){
@@ -26,7 +27,7 @@
 			ResultSet rs=db.viewRoom(hostel);
 			if(rs.next()){
 		%>
-				<table>
+				<table id="view-table">
 					<thead>
 						<tr>
 							<th>SI NO.</th>
@@ -69,3 +70,4 @@
 	</form>
 </div>
 <%@include file="Footer.jsp" %>
+<link rel="stylesheet" type="text/css" href="css/custom.css" />

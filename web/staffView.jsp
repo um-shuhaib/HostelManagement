@@ -10,7 +10,7 @@
           ResultSet rs=db.viewStaff();
           if(rs.next()){
       %>
-						<table>
+						<table id="view-table">
 							<thead>
 								<tr>
 									<th>SI NO.</th>
@@ -62,3 +62,4 @@
 		</form>
 	</div>
 <%@include file="Footer.jsp" %>
+<link rel="stylesheet" type="text/css" href="css/custom.css" />

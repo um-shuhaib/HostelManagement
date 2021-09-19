@@ -1,8 +1,44 @@
 textarea{
     resize: none;
 }
-.tb-border{
-  border: 1px solid black;
+.containing{
+  width: 100%;
+  padding: 5px;
+}
+#view-table{
   border-collapse: collapse;
-  padding: 15px;
+  width: auto;
+}
+
+#view-table td, #view-table th{
+  border: 1px solid #ddd;
+  padding: 8px ;
+}
+
+#view-table th{
+  padding-top: 12px ;
+  padding-bottom: 12px ;
+  text-align: left ;
+  background-color: #6c0491 ;
+  text-decoration: none;
+  opacity: 0.9;
+  color: white;
+}
+
+#view-table tr:nth-child(even){background-color: #f2f2f2;}
+#view-table tr:hover{background-color: #ddd ;}
+
+#Submit{
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#view-width{
+  width: 100%;
+  float: left;
 }

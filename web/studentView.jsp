@@ -11,7 +11,6 @@
 			<tr>
 				<td>
 					<select id="selectHostel" name="hostel">
-						<option value="-1">Select</option>
 						<option value="Boys">Boys</option>
 						<option value="Girls">Girls</option>
 					</select>
@@ -19,6 +18,7 @@
 			</tr>
 		</table>
 		<input type="submit" name="btn" value="Submit"/>
+	</div>
 		<%
       if(request.getParameter("btn")!=null){
         String hostel=request.getParameter("hostel");
@@ -26,7 +26,7 @@
         ResultSet rs=db.viewStudent(hostel);
         if(rs.next()){
 			  	%>
-					<table>
+					<table id="view-table" class="view-width">
 						<thead>
 							<tr>
 								<th>SI NO.</th>
@@ -84,10 +84,14 @@
 				}
 				else{
 					%>
-					<h2>NO DATA</h2>
+					<div class="container" align="center">
+						<h2>NO DATA</h2>
+					</div>
+
 					<%
 				}
 			}
 					%>
 	</form>
 	<%@include file="Footer.jsp" %>
+	<link rel="stylesheet" type="text/css" href="css/custom.css" />
