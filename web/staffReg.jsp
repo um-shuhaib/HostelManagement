@@ -22,13 +22,14 @@
 
 				<tr>
 					<td><label for="age">AGE</label></td>
-					<td><input type="text" id="age" name="age"></td>
+					<td><input type="number" id="age" name="age"></td>
 				</tr>
 
 				<tr>
 					<td><label for="Hostel">Hostel</label></td>
 					<td>
 						<select id="hostel" name="hostel">
+							<option value="-1">Select</option>
 							<option value="Boys">Boys</option>
 							<option value="Girls">Girls</option>
 						</select>
@@ -74,10 +75,11 @@
 				</tr>
 
 			</table>
-			<input type="submit" value="Submit" name="Submit">
+			<input type="submit" value="Submit" onclick="return valid_staff()" name="Submit">
 	</form>
 </div>
 <%@include file="Footer.jsp" %>
+<script type="text/javascript" src="js/javascript.js"></script>
 
 <%
     if(request.getParameter("Submit")!=null)
