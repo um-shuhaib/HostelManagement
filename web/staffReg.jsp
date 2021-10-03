@@ -1,82 +1,105 @@
 <%@page import="Dbcon.DbQuery"%>
 
+<link rel="stylesheet" type="text/css" href="css/reg.css" />
 <%@include file="Header.jsp" %>
-<div>
-	<h2>Staff Registration</h2>
+<div class="body" align="center">
 	<form method="post">
-		<table>
-				<tr>
-					<td><label for="staff_name">Staff Name</label></td>
-					<td><input type="text" name="staff_name" id="staff_name" placeholder="Staff Name"></td>
-				</tr>
+            <div class="container">
+        <div class="row">
+                <h1 class="h1 input-container"><strong>STAFF REGISTRATION</strong></h1>
+        </div>
 
-				<tr>
-					<td> <label for="gender">Gender</label>	</td>
-					<td><input type="radio" name="gender" id="male" checked="checked" value="male">
-						<label for="male">Male</label>
+        <div class="row input-container">
+                <div class="col-md-12">
+                    <div class="styled-input wide">
+                        <input type="text" id="staff_name" name="staff_name" required />
+                        <label>Staff Name</label>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="styled-input wide">
+                        <input type="number" id="age" name="age" required />
+                        <label>Age</label>
+                    </div>
+                </div>
+                <div class=" col-sm-6 col-md-6 ">
+                    <div class="">
 
-						<input type="radio" name="gender" id="female" value="female">
-						<label for="female">Female</label>
-					</td>
-				</tr>
+                        <input type="radio" class="btn-check" name="gender" id="male" checked="checked" value="male" autocomplete="off">
+                        <label class="btn btn-secondary" for="male">Male</label>
+                    </div>
+                </div>
+                <br><br>
+                <div class=" col-sm-6 col-md-6 ">
+                    <div class="">
 
-				<tr>
-					<td><label for="age">AGE</label></td>
-					<td><input type="number" id="age" name="age"></td>
-				</tr>
+                        <input type="radio" class="btn-check" name="gender" id="female" checked="checked" value="female" autocomplete="off">
+                        <label class="btn btn-secondary" for="female">Female</label>
+                    </div>
+                </div>
 
-				<tr>
-					<td><label for="Hostel">Hostel</label></td>
-					<td>
-						<select id="hostel" name="hostel">
-							<option value="-1">Select</option>
+                <div class="col-xs-12 col-md-12">
+                    <div class="styled-input wide">
+                        <textarea id="address" name="address" required></textarea>
+                        <label>Address</label>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input wide">
+                        <input type="number" id="salary" name="salary" required />
+                        <label>Salary</label>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input wide" >
+                        <input type="number" id="phone" name="phone" required />
+                        <label>Phone Number</label>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input wide">
+                        <input type="password" id="password" name="password" required />
+                        <label>Password</label>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input wide">
+                        <input type="email" id="email" name="email" required />
+                        <label>Email</label>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-md-12">
+                    <div class="styled-input wide">
+
+                        <select id="hostel" name="hostel" class="form-select bg-dark text-white input-container" aria-label="Default select example">
 							<option value="Boys">Boys</option>
 							<option value="Girls">Girls</option>
 						</select>
-					</td>
-				</tr>
+                    </div>
+                </div>
 
-				<tr>
-					<td><label for="salary">Salary</label></td>
-					<td><input type="text" name="salary" id="salary"></td>
-				</tr>
 
-				<tr>
-					<td><label for="address">Address</label></td>
-					<td><textarea id="address" name="address" cols="20" rows="5"></textarea></td>
-				</tr>
 
-				<tr>
-					<td><label for="designation">Designation</label></td>
-					<td>
-						<select id="designation" name="designation">
-				                    <option value="-1">Select</option>
-				                    <option value="Sweeper">Sweeper</option>
-				                    <option value="Warden">Warden</option>
-				                    <option value="Security">Security</option>
-				                    <option value="Cook">Cook</option>
-						</select>
-					</td>
-				</tr>
+                <div class="col-xs-12 col-md-12">
+                    <div class="styled-input wide">
 
-				<tr>
-					<td><label for="phone">Phone</label></td>
-					<td><input type="text" name="phone" id="phone"></td>
-				</tr>
+                        <select id="designation" name="designation" class="form-select bg-dark text-white input-container" aria-label="Default select example">
+                            <option value="-1">Select</option>
+                            <option value="Sweeper">Sweeper</option>
+                            <option value="Warden">Warden</option>
+                            <option value="Security">Security</option>
+                            <option value="Cook">Cook</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <input type="submit" name="submit" value="submit" class="btn-lrg submit-btn input-container">
 
-				<tr>
-					<td><label for="email">Email</label></td>
-					<td><input type="email" name="email" id="email" placeholder="Email"></td>
-				</tr>
-
-				<tr>
-					<td><label for="password">Password</label></td>
-					<td><input type="password" name="password" id="password" placeholder="Password"></td>
-				</tr>
-
-			</table>
-			<input type="submit" value="Submit" onclick="return valid_staff()" name="Submit">
-	</form>
+                </div>
+        </div>
+    </div>	
+        </form>
 </div>
 <%@include file="Footer.jsp" %>
 <script type="text/javascript" src="js/javascript.js"></script>

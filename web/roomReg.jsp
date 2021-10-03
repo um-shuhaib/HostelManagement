@@ -23,7 +23,7 @@
 								</div>
 								<div class="col-md-12 col-lg-6">
 										<div class="styled-input wide">
-												<select id="hostel" name="hostel" class="form-select bg-dark text-white " aria-label="Default select example">
+												<select id="hostel" name="hostel" class="form-select bg-dark text-white input-container" aria-label="Default select example">
 														<option value="-1">Select Hostel</option>
 							<option value="boys">Boys</option>
 							<option value="girls">Girls</option>
@@ -32,7 +32,7 @@
 								</div>
 								<div class="col-md-12 col-lg-6">
 										<div class="styled-input wide">
-												<select id="floor" name="floor" class="form-select bg-dark text-white " aria-label="Default select example">
+												<select id="floor" name="floor" class="form-select bg-dark text-white input-container" aria-label="Default select example">
 							<option value="-1">Select Floor</option>
 							<option value="0">Ground Floor</option>
 							<option value="1">First Floor</option>
