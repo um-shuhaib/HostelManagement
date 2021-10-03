@@ -1,98 +1,118 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="Dbcon.DbQuery"%>
 
+<link rel="stylesheet" type="text/css" href="css/reg.css" />
 <%@include file="Header.jsp" %>
-	<h1>Student Registration</h1>
-	<form method="post">
-		<table>
-			<tr>
-				<td><label for="name">Name</label></td>
-				<td><input type="text" name="name" id="name" required></td>
-			</tr>
+<div class="body" align="center">
+        <form method="post">
+            <div class="container">
+        <div class="row">
+               <h1 class="h1 input-container"><strong>STUDENT REGISTRATION</strong></h1>
+        </div>
+        <div class="row input-container">
+                <div class="col-md-12">
+                    <div class="styled-input wide">
+                        <input type="text" id="name" name="name" required />
+                        <label>Name</label> 
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="styled-input wide">
+                        <input type="text" id="age" name="age" required />
+                        <label>Age</label> 
+                    </div>
+                </div>
+            
+                <div class=" col-xs-6 col-md-6 ">
+                    <div class="">
+                       
+                        <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off">
+                        <label class="btn btn-secondary" for="male">Male</label>
+                    </div>
+                </div>
+                <br><br>
+                <div class=" col-xs-6 col-md-6">
+                    <div class="">
+                         
+                        <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off">
+                        <label class="btn btn-secondary" for="female">Female</label>
+                    </div>
+                </div>
+                
+                <div class="col-md-12">
+                    <div class="styled-input wide">
+                        <textarea id="address" name="address" required></textarea>
+                        <label>Address</label>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input">
+                        <input type="text" id="fathname" name="fathname" required />
+                        <label>Name of Father</label> 
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input" style="float:right;">
+                        <input type="text" id="fatherno" name="fatherno" required />
+                        <label>Phone Number</label> 
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input">
+                        <input type="text" id="mothname" name="mothname" required />
+                        <label>Name of Mother</label> 
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input" style="float:right;">
+                        <input type="text" id="motherno" name="motherno" required />
+                        <label>Phone Number</label> 
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input">
+                        <input type="text" id="guardname" name="guardname" required />
+                        <label>Name of Guardian</label> 
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input" style="float:right;">
+                        <input type="text" id="guardno" name="guardno" required />
+                        <label>Phone Number</label> 
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="styled-input wide">
+                        <input type="text" id="college" name="college" required />
+                        <label>Name of School/College</label> 
+                    </div>
+                </div>
+                <div class=" col-md-12">
+                    <div class=" styled-input wide" >
+                        <input type="date" id="joindate" name="joindate"  value="2000-01-01">
+                        <label for="joindate">Join Date</label> 
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="styled-input wide"> 
+                        
 
-			<tr>
-				<td><label for="Age">AGE</label></td>
-				<td><input type="text" id="Age" name="Age"></td>
-			</tr>
-
-			<tr>
-				<td><label for="gender">Gender</lable></td>
-				<td>
-					<input type="radio" name="gender" id="male" value="male">
-						<label for="male">Male</label>
-					<input type="radio" name="gender" id="female" value="female">
-						<label for="female">Female</label>
-				</td>
-			</tr>
-
-			<tr>
-				<td><label for="address">Address</label></td>
-				<td><textarea id="address" name="address" cols="20" rows="5" required></textarea></td>
-				<%-- <td><input type="text" id="address" name="address"></td> --%>
-			</tr>
-
-			<tr>
-				<td><label for="fathname">Name of Father</label></td>
-				<td><input type="text" name="fathname" id="fathname" required></td>
-			</tr>
-
-			<tr>
-				<td><label for="fatherno">Phone</label></td>
-				<td><input type="text" name="fatherno" id="fatherno" required></td>
-			</tr>
-
-			<tr>
-				<td><label for="mothname">Name of Mother</label></td>
-				<td><input type="text" name="mothname" id="mothname" required></td>
-			</tr>
-
-			<tr>
-				<td><label for="motherno">Phone</label></td>
-				<td><input type="text" name="motherno" id="motherno" required></td>
-			</tr>
-
-			<tr>
-				<td><label for="guardname">Name of Guardian</label></td>
-				<td><input type="text" name="guardname" id="guardname" required></td>
-			</tr>
-
-			<tr>
-				<td><label for="guardno">Phone</label></td>
-				<td><input type="text" name="guardno" id="guardno" required></td>
-			</tr>
-
-			<tr>
-				<td><label for="college">Name of School/College</label></td>
-				<td><input type="text" id="college" name="college"></td>
-			</tr>
-
-			<tr>
-				<td><label for="joindate">Join Date</label></td>
-				<td><input type="date" id="joindate" name="joindate" value="2000-01-01"></td>
-			</tr>
-
-			<tr>
-				<td><label for="roomno">Room No.</label></td>
-				<td>
-					<select id="roomno" name="roomid">
-						<option value="-1">Select</option>
-							<%
-			        DbQuery dq=new DbQuery();
-			        ResultSet rs=dq.viewRoom();
-			        while(rs.next()){
-							%>
-								<option value="<%=rs.getString("room_id")%>">
-									<%=rs.getString("room_no")%>
-								</option>
-							<%
-			        }
-							%>
-					</select>
-				</td>
-			</tr>
-		</table>
-		<input type="submit" value="Submit" name="Submit">
-	</form>
+                          <select id="roomno" name="roomid" class="form-select bg-dark text-white input-container" aria-label="Default select example">
+                            <option selected>Room Number</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <input type="submit" name="submit" class="btn-lrg submit-btn input-container">
+                    
+                </div>
+        </div>
+    </div>
+</form>
+</div>
 <%@include file="Footer.jsp" %>
 
 <%
@@ -110,7 +130,8 @@
     String institute=request.getParameter("college");
     String joindate=request.getParameter("joindate");
     String roomid=request.getParameter("roomid");
-
+    
+    DbQuery dq= new DbQuery(); 
     int i=dq.addStudent(studname, age, gender, address, fathname, fathphone, mothname, mothphone, guardname, guardphone, institute, joindate, roomid);
     if(i>0){
       %>
