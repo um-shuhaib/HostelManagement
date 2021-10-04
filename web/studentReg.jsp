@@ -23,18 +23,17 @@
                     </div>
                 </div>
             
-                <div class=" col-xs-6 col-md-6 ">
+                <div class=" col-sm-6 col-md-6 ">
                     <div class="">
-                       
-                        <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off">
+
+                        <input type="radio" class="btn-check" name="gender" id="male" checked="checked" value="male" hidden />
                         <label class="btn btn-secondary" for="male">Male</label>
                     </div>
                 </div>
                 <br><br>
-                <div class=" col-xs-6 col-md-6">
+                <div class=" col-sm-6 col-md-6 ">
                     <div class="">
-                         
-                        <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off">
+                        <input type="radio" class="btn-check" name="gender" id="female" value="female" hidden />
                         <label class="btn btn-secondary" for="female">Female</label>
                     </div>
                 </div>
