@@ -65,3 +65,29 @@ function valid_staff(){
     return message("Please Select Designation","designation")
 
 }
+
+function valid_room(){
+  let roomNo= document.getElementById("room").value
+  let beds = document.getElementById("beds").value
+  let hostel = document.getElementById("hostel").value
+  let floor = document.getElementById("floor").value
+
+  if(roomNo == "" || roomNo ==null)
+    return message("Please Enter Room Number","room")
+
+  if(roomNo >200 || roomNo <1)
+    return message("Please Enter a Valid Room NUmber b/w 1-200","room")
+
+  if(beds == "" || beds == null)
+    return message("Please Enter Number of Beds","beds")
+
+  if(beds <1 || beds > 10)
+    return message("Please Enter a Number b/w 1-10","beds")
+
+  if(hostel == "-1")
+    return message("Please Select a Hostel","hostel")
+
+  if(floor == "-1")
+    return message("Please Select a Floor","floor")
+
+}
