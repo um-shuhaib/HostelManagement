@@ -55,16 +55,17 @@
                         <label>Phone Number</label>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-12">
-                    <div class="styled-input wide">
-                        <input type="password" id="password" name="password" required />
-                        <label>Password</label>
-                    </div>
-                </div>
+
                 <div class="col-md-6 col-sm-12">
                     <div class="styled-input wide">
                         <input type="email" id="email" name="email" required />
                         <label>Email</label>
+                    </div>
+                </div>
+								<div class="col-md-6 col-sm-12">
+                    <div class="styled-input wide">
+                        <input type="password" id="password" name="password" required />
+                        <label>Password</label>
                     </div>
                 </div>
 
@@ -72,9 +73,10 @@
                     <div class="styled-input wide">
 
                         <select id="hostel" name="hostel" class="form-select bg-dark text-white input-container" aria-label="Default select example">
-							<option value="Boys">Boys</option>
-							<option value="Girls">Girls</option>
-						</select>
+													<option value="-1">Select</option>
+													<option value="Boys">Boys</option>
+													<option value="Girls">Girls</option>
+												</select>
                     </div>
                 </div>
 
@@ -93,22 +95,22 @@
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <input type="submit" name="submit" value="submit" class="btn-lrg submit-btn input-container">
+                    <input type="submit" name="submit" value="submit" class="btn-lrg submit-btn input-container" onclick="return valid_staff()">
 
                 </div>
         </div>
-    </div>	
+    </div>
         </form>
 </div>
 <%@include file="Footer.jsp" %>
 <script type="text/javascript" src="js/javascript.js"></script>
 
 <%
-    if(request.getParameter("Submit")!=null)
+    if(request.getParameter("submit")!=null)
     {
 	    String staff_name=request.getParameter("staff_name");
+            String age=request.getParameter("age");
 	    String gender=request.getParameter("gender");
-	    String age=request.getParameter("age");
 	    String hostel=request.getParameter("hostel");
 	    String salary=request.getParameter("salary");
 	    String address=request.getParameter("address");
