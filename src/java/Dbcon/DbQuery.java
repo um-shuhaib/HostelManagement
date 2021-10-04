@@ -97,7 +97,7 @@ public class DbQuery {
     public ResultSet viewRoom()
     {
         try {
-            String str="SELECT * FROM `room`";
+            String str="SELECT * FROM room";
             rs=st.executeQuery(str);
 
         } catch (Exception e) {

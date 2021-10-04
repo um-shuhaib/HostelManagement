@@ -12,7 +12,7 @@
 				<div class="row input-container">
 								<div class="col-md-12 col-lg-6">
 										<div class="styled-input wide">
-												<input type="number" id="room" name="roomNo" required />
+												<input type="number" id="room" name="room" required />
 												<label>Room Number</label>
 										</div>
 								</div>
