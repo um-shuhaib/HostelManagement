@@ -2,23 +2,24 @@
 <%@page import="Dbcon.DbQuery"%>
 
 <%@include file="Header.jsp" %>
+      </div>
 	<form method="post">
-		<table>
-			<tr>
-				<td><label for="selectHostel">Select Hostel </label></td>
-			</tr>
+            <div class="body">
+        <div class="content">
+          <h1>STUDENT DETAILS</h1>
+        </div>
 
-			<tr>
-				<td>
-					<select id="selectHostel" name="hostel">
-						<option value="Boys">Boys</option>
-						<option value="Girls">Girls</option>
-					</select>
-				</td>
-			</tr>
-		</table>
-		<input type="submit" name="btn" value="Submit"/>
-	</div>
+        <div class="content">
+          <select id="selectHostel" name="hostel">
+            <option value="Boys">Boys</option>
+            <option value="Girls">Girls</option>
+          </select>
+        </div>
+
+        <div class="content">
+          <input type="submit" name="btn" value="Submit"/>
+        </div>
+            </div>
 		<%
       if(request.getParameter("btn")!=null){
         String hostel=request.getParameter("hostel");

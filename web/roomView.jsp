@@ -2,23 +2,26 @@
 <%@page import="Dbcon.DbQuery"%>
 
 <%@include file="Header.jsp" %>
+</div>
 <div>
-	<h2>Room View</h2>
 	<form method="post">
-		<table>
-			<tr>
-				<td><label for="selectHostel">Select Hostel</label></td>
-				<td>
-					<select id="selectHostel" name="selected_hostel">
-						<option value="boys">Boys</option>
-						<option value="girls">Girls</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="Submit" name="selectHostel" /></td>
-			</tr>
-		</table>
+            <div class="body">
+                <div class="content">
+                  <h1>ROOM DETAILS</h1>
+                </div>
+
+                <div class="content">
+                  <select id="selectHostel" name="selected_hostel">
+                    <option value="Boys">Boys</option>
+                    <option value="Girls">Girls</option>
+                  </select>
+                </div>
+
+                <div class="content">
+                  <input type="submit" value="Submit" name="selectHostel" />
+                </div>
+            </div>
+<div class="container" align="center">
 
 		<%
 		DbQuery db=new DbQuery();
