@@ -66,7 +66,7 @@
 							<td><%=rs.getString("guard_phone")%></td>
 							<td><%=rs.getString("institute")%></td>
 							<td><%=rs.getString("join_date")%></td>
-							<td><%=rs.getString("room_id")%></td>
+							<td><%=rs.getString("room_no")%></td>
 							<td>
 								<img src="studentphoto/<%=rs.getString("photo")%>" height="100" width="75"/><br>
 								<a href="photo.jsp?id=<%=rs.getString("student_id")%>&name=<%=rs.getString("stud_name")%>" >Add/Change</a>
