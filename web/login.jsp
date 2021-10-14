@@ -36,10 +36,10 @@
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
-            <h3>
-              Joson
+              <h3 style="color: green">
+              Hostel Management
             </h3>
-            <span> college</span>
+            <span>System</span>
           </a>
 
           <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">

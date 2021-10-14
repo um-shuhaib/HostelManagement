@@ -31,10 +31,10 @@
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
-            <h3>
-              Joson
+            <h3 style="color: green">
+              Hostel Management
             </h3>
-            <span> college</span>
+            <span>System</span>
           </a>
 
 
@@ -121,7 +121,7 @@
                   <div class="detail-box">
                     <div>
                       <h1>
-                        E D U C A T I O N
+                        H O S T E L
                       </h1>
 
                     </div>
@@ -137,7 +137,7 @@
                   <div class="detail-box">
                     <div>
                       <h1>
-                        E D U C A T I O N
+                        H O S T E L
                       </h1>
 
                     </div>
@@ -153,7 +153,7 @@
                   <div class="detail-box">
                     <div>
                       <h1>
-                        E D U C A T I O N
+                        H O S T E L
                       </h1>
 
                     </div>
@@ -195,7 +195,7 @@
           <div class="detail-box">
             <div class="heading_container">
               <h3>
-                About Our College
+                About Our Hostel
               </h3>
               <p>
                 It is a long established fact that a reader will be distracted
