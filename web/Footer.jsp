@@ -5,62 +5,24 @@
 
       <!-- info section -->
       <section class="info_section layout_padding">
-        <div class="container">
+          <div class="container" style="padding-left: 420px;">
           <div class="row">
-            <div class="col-md-3">
-              <div class="info_menu">
-                <h5>
-                  QUICK LINKS
-                </h5>
-                <ul class="navbar-nav  ">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html">Add Staff</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="course.html"> View Staff</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="event.html"> View Room </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html"> View Student </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="login.html">Logout</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="info_course">
-                <h5>
-                  TOP RATED COURSE
-                </h5>
-                <p>
-                  There are many variations of passages of Lorem Ipsum available,
-                  but the majority have suffered alteration in some form, by
-                  injected humou
-                </p>
-              </div>
-            </div>
-
+            
+            
             <div class="col-md-5 offset-md-1">
               <div class="info_news">
                 <h5>
-                  FOR ANY QUERY, PLEASE WRITE TO US
+                  FOR ANY QUERY,
                 </h5>
                 <div class="info_contact">
-                  <a href="">
-                    Location
+                  <a href="https://www.google.com/maps/dir/11.2434063,75.9347108/kgptc/@11.2604133,75.7812477,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3ba65edc68eab2eb:0xade28d609805f85e!2m2!1d75.7683046!2d11.2863363" target="_blank">
+                    Kerala
                   </a>
                   <a href="">
-                    demo@gmail.com
+                    hostelcare@gmail.com
                   </a>
                   <a href="">
-                    Call : +01 1234567890
+                    Call : +91 8138092604
                   </a>
                 </div>
 
@@ -75,15 +37,15 @@
       <!-- footer section -->
       <footer class="container-fluid footer_section">
         <p>
-          &copy; 2021 All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a>
+          &copy; 2021 All Rights Reserved 
+          
         </p>
       </footer>
       <footer class="container-fluid footer_section">
 
         <p>
           Distributed By
-          <a href="https://themewagon.com/">Themewagon</a>
+          <a href="">Team 5</a>
         </p>
 
     </footer>

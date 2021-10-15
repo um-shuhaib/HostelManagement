@@ -63,8 +63,7 @@
               Hostel Management
             </h3>
             <p>
-              Create your free account now and get immediate access to 100s of
-              online courses
+              A Hotel Manager, Hotelier, or Lodging Manager is a person who manages the operation of a Hotel, Motel, Resort, or other Lodging related establishment.
           </p>
           </div>
         </div>
@@ -96,14 +95,7 @@
       <div class="row">
         <div class="col-md-3">
           <div class="info_course">
-            <h5>
-              TOP RATED COURSE
-            </h5>
-            <p>
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humou
-            </p>
+            
           </div>
         </div>
       </div>
@@ -113,21 +105,9 @@
   <!-- end info section -->
 
   <!-- footer section -->
-  <footer class="container-fluid footer_section">
-    <p>
-      &copy; 2021 All Rights Reserved By
-      <a href="https://html.design/">Free Html Templates</a>
-    </p>
-  </footer>
+ 
 
-  <footer class="container-fluid footer_section">
-
-    <p>
-      Distributed By
-      <a href="https://themewagon.com/">Themewagon</a>
-    </p>
-
-</footer>
+  
   <!-- footer section -->
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
