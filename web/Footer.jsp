@@ -14,7 +14,11 @@
           
         </p>
       </footer>
-      
+      <footer class="container-fluid footer_section">
+
+        
+
+    </footer>
       <!-- footer section -->
 
       <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
