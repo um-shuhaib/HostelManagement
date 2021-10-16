@@ -12,7 +12,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Joson</title>
+  <title>Hostel</title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -315,8 +315,8 @@
   <!-- footer section -->
   <footer class="container-fluid footer_section">
     <p>
-      &copy; 2021 All Rights Reserved By
-      <a href="https://html.design/">Free Html Templates</a>
+      &copy; 2021 All Rights Reserved 
+      
     </p>
 
   </footer>
@@ -326,7 +326,7 @@
 
       <p>
         Distributed By
-        <a href="https://themewagon.com/">Themewagon</a>
+        <a href="https://themewagon.com/">Team 5</a>
       </p>
 
   </footer>
