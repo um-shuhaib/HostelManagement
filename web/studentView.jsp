@@ -2,8 +2,8 @@
 <%@page import="Dbcon.DbQuery"%>
 
 <%@include file="Header.jsp" %>
-      </div>
-	<form method="post">
+      </div >
+	<form style="min-height: 450px" method="post">
             <div class="body">
         <div class="content">
           <h1>STUDENT DETAILS</h1>

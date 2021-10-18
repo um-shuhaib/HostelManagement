@@ -2,7 +2,7 @@
 <%@page import="java.sql.*"%>
 
 <%@include file="Header.jsp" %>
-	<div>
+	<div style="min-height: 450px">
 		<h2>STAFF DETAILS</h2>
 		<form method="post">
       <%

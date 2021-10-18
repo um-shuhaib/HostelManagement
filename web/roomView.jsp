@@ -3,7 +3,7 @@
 
 <%@include file="Header.jsp" %>
 </div>
-<div>
+<div style="min-height: 450px">
 	<form method="post">
             <div class="body">
                 <div class="content">
