@@ -1,6 +1,6 @@
 <%@include file="Header.jsp" %>
   <h1>UPLOAD PHOTO</h1>
-  <div>
+  <div style="min-height: 450px">
     <form id="form1" name="form1" method="post" enctype="multipart/form-data" action="studentfile.jsp">
       <%
         String stud_id=request.getParameter("student_id");

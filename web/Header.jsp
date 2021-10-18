@@ -124,4 +124,4 @@
 
   <!-- event section -->
   <section class="event_section layout_padding">
-    <div class="container" align="center">
+    <div  class="container" align="center">
