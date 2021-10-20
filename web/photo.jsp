@@ -1,4 +1,5 @@
 <%@include file="Header.jsp" %>
+<div class="rrb">
   <h1>UPLOAD PHOTO</h1>
   <div style="min-height: 450px">
     <form id="form1" name="form1" method="post" enctype="multipart/form-data" action="studentfile.jsp">
@@ -23,4 +24,5 @@
         </table>
     </form>
   </div>
+</div>
 <%@include file="Footer.jsp" %>
