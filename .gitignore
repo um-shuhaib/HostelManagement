@@ -1,2 +1,4 @@
 /dist/
 build/
+web/studentphoto/*
+!web/studentphoto/.gitkeep
