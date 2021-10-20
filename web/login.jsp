@@ -113,20 +113,46 @@
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
 
-<footer class="container-fluid footer_section">
-    <p>
-      &copy; 2021 All Rights Reserved 
-      
-    </p>
-
-  </footer>
+<!-- info section -->
+      <section class="info_section layout_padding">
+        <div class="container">
+          <div class="row">
+           
 
 
-  <footer class="container-fluid footer_section">
+            <div class="col-md-5 offset-md-1">
+              <div class="info_news">
+                <h5>
+                  FOR ANY QUERY, PLEASE WRITE TO US
+                </h5>
+                <div class="info_contact">
+                  <a href="https://www.google.com/maps/dir/11.2434063,75.9347108/kgptc/@11.2689122,75.7812477,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3ba65edc68eab2eb:0xade28d609805f85e!2m2!1d75.7683046!2d11.2863363">
+                    Calicut
+                  </a>
+                  <a href="">
+                    hosyelcare@gmail.com
+                  </a>
+                  <a href="">
+                    Call : +91 8138092604
+                  </a>
+                </div>
 
-      
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  </footer>
+      <!-- end info section -->
+
+      <!-- footer section -->
+      <footer class="container-fluid footer_section">
+        <p>
+          &copy; 2021 All Rights Reserved 
+          
+        </p>
+      </footer>
+
 
 <%
     if(request.getParameter("submit")!=null)
