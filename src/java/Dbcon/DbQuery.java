@@ -62,6 +62,11 @@ public class DbQuery {
     }
     public int addRoom(String roomno,String totbeds,String flr,String hostel){
         int i=0;
+        if(hostel.equalsIgnoreCase("boys")){
+            roomno = roomno+"B" ;
+        }else if(hostel.equalsIgnoreCase("girls")){
+            roomno = roomno+"G" ;
+        }else{}
         try {
             String str="INSERT INTO room(room_no,tot_beds,flr,hostel)VALUES('"+roomno+"','"+totbeds+"','"+flr+"','"+hostel+"')";
             i=st.executeUpdate(str);
