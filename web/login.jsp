@@ -113,7 +113,20 @@
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
 
-<%@include file="Footer.jsp" %>
+<footer class="container-fluid footer_section">
+    <p>
+      &copy; 2021 All Rights Reserved 
+      
+    </p>
+
+  </footer>
+
+
+  <footer class="container-fluid footer_section">
+
+      
+
+  </footer>
 
 <%
     if(request.getParameter("submit")!=null)

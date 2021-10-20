@@ -241,22 +241,9 @@
 
 
   <!-- end info section -->
-
+<%@include file="Footer.jsp" %>
   <!-- footer section -->
-  <footer class="container-fluid footer_section">
-    <p>
-      &copy; 2021 All Rights Reserved 
-      
-    </p>
-
-  </footer>
-
-
-  <footer class="container-fluid footer_section">
-
-      
-
-  </footer>
+  
 
   <!-- footer section -->
 
