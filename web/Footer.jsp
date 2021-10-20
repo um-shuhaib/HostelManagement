@@ -10,7 +10,7 @@
       <!-- footer section -->
       <footer class="container-fluid footer_section">
         <p>
-          &copy; 2021 All Rights Reserved 
+          
           
         </p>
       </footer>
