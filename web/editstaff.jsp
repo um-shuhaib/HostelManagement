@@ -116,7 +116,7 @@
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <input type="submit" name="submit" value="Update" class="btn-lrg submit-btn input-container" onclick="return valid_staff()">
+                    <input type="submit" name="submit" value="Update" class="btn-lrg submit-btn input-container" onclick="return valid_edit_staff()">
 
                 </div>
         </div>

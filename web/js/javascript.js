@@ -65,6 +65,63 @@ function valid_staff(){
     return message("Please Select Designation","designation")
 
 }
+function valid_edit_staff(){
+  let name = document.getElementById("staff_name").value
+  let age = document.getElementById("age").value
+  let address = document.getElementById("address").value
+  let salary = document.getElementById("salary").value
+  let phone = document.getElementById("phone").value
+  let mail = document.getElementById("email").value
+  let hostel = document.getElementById("hostel").value
+  let designation = document.getElementById("designation").value
+
+  if(name == "" || name == null)
+    return message("Please Enter your Name","staff_name")
+
+  if(/[^a-z\s]/gi.test(name))
+    return message("Please Enter a Valid Name","staff_name")
+
+  if(name.length <=2)
+    return message("Please Enter Your Full Name","staff_name")
+
+  if(age == null || age == "")
+    return message("Please Enter Your Age","age")
+
+  if(age > 100 || age < 1 || /[^0-9]/gi.test(age))
+    return message("Not a Valid Age!","age")
+
+  if(age < 18 || age > 50 )
+    return message("You are Too old or Too Young!","age")
+
+  if(address == "" || address == null)
+    return message("Please Enter your Address","address")
+
+  if(address.length <= 10)
+    return message("Please Enter a Valid Address","address")
+
+  if(salary == "" || salary == null)
+    return message("Please Enter Salary","salary")
+
+  if(/[^0-9\s]/gi.test(salary))
+    return messge("Please Enter a valid Salary","salary")
+
+  if(salary >= 1000000)
+    return  message("Please Enter a Valid Salary","salary")
+
+
+
+
+  if(mail == null || mail == "")
+    return message("Please Enter Your Email Address","email")
+
+  if(hostel == "-1")
+    return message("Please Select Hostel","hostel")
+
+  if(designation == "-1")
+    return message("Please Select Designation","designation")
+
+}
+
 
 function valid_room(){
   let roomNo= document.getElementById("room").value
